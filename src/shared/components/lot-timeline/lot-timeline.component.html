@@ -1,0 +1,21 @@
+<div class="timeline" [class.timeline--compact]="compact">
+  <div
+    *ngFor="let step of trace; let i = index; let last = last"
+    class="timeline__item"
+    [class.timeline__item--done]="step.completed"
+    [class.timeline__item--pending]="!step.completed"
+  >
+    <div class="timeline__marker">
+      <span class="material-icons-round timeline__icon" *ngIf="step.completed">check_circle</span>
+      <span class="material-icons-round timeline__icon timeline__icon--pending" *ngIf="!step.completed">{{ getIcon(step.etape) }}</span>
+    </div>
+    <div class="timeline__connector" *ngIf="!last"></div>
+    <div class="timeline__content">
+      <span class="timeline__label">{{ step.etape }}</span>
+      <span class="timeline__meta" *ngIf="step.completed && step.date">
+        {{ step.date }} <ng-container *ngIf="step.acteur"> · {{ step.acteur }}</ng-container>
+      </span>
+      <span class="timeline__meta timeline__meta--pending" *ngIf="!step.completed">En attente</span>
+    </div>
+  </div>
+</div>

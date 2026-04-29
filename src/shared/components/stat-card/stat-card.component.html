@@ -1,0 +1,13 @@
+<article class="stat-card" [ngClass]="'stat-card--' + variant">
+  <div class="stat-card__header">
+    <div class="stat-card__icon">
+      <ng-content select="[slot=icon]"></ng-content>
+    </div>
+    <span class="stat-card__trend" [ngClass]="trendDirection === 'up' ? 'stat-card__trend--up' : 'stat-card__trend--down'">
+      <span class="material-icons-round stat-card__trend-icon" aria-hidden="true">{{ trendDirection === 'up' ? 'trending_up' : 'trending_down' }}</span>
+      {{ trendValue }}
+    </span>
+  </div>
+  <div class="stat-card__value">{{ value }} <span class="stat-card__unit" *ngIf="unit">{{ unit }}</span></div>
+  <div class="stat-card__label">{{ label }}</div>
+</article>

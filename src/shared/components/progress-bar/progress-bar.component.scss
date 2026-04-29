@@ -1,0 +1,15 @@
+:host { display: block; min-width: 80px; }
+
+.progress-bar {
+  height: 8px;
+  background: var(--earth-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--primary-300), var(--primary-500));
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

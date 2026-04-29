@@ -1,0 +1,14 @@
+<div class="qr-scanner">
+  <button type="button" class="qr-scanner__btn" *ngIf="!streamActive" (click)="startScan()" [disabled]="scanning">
+    <span class="material-icons-round">qr_code_scanner</span>
+    {{ scanning ? 'Ouverture…' : 'Ouvrir le scanner' }}
+  </button>
+  <div class="qr-scanner__video-wrap" *ngIf="streamActive">
+    <video #videoEl class="qr-scanner__video" muted playsinline></video>
+    <p class="qr-scanner__hint">Placez le QR code du lot dans le cadre</p>
+    <button type="button" class="qr-scanner__stop" (click)="stopScan()">
+      <span class="material-icons-round">close</span> Fermer
+    </button>
+  </div>
+  <p class="qr-scanner__error" *ngIf="error">{{ error }}</p>
+</div>

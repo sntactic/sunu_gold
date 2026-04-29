@@ -1,0 +1,4 @@
+<div class="loader" [class.loader--overlay]="overlay" [attr.aria-busy]="true" [attr.aria-label]="message || 'Chargement'">
+  <div class="loader__spinner"></div>
+  <p class="loader__message" *ngIf="message">{{ message }}</p>
+</div>

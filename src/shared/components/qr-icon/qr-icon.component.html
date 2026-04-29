@@ -1,0 +1,20 @@
+<button type="button" class="qr-icon" (click)="openOverlay()" [title]="'Afficher le QR code — ' + lotId" aria-label="Afficher le QR code du lot">
+  <span class="material-icons-round qr-icon__symbol">qr_code_2</span>
+</button>
+<div
+  class="qr-overlay"
+  *ngIf="showOverlay"
+  role="dialog"
+  aria-modal="true"
+  aria-label="QR code du lot"
+>
+  <div class="qr-overlay__backdrop" (click)="closeOverlay()"></div>
+  <div class="qr-overlay__box">
+    <p class="qr-overlay__title">{{ lotId }}</p>
+    <div class="qr-overlay__qrcode-wrap">
+      <qrcode [qrdata]="verificationUrl" [width]="220" [errorCorrectionLevel]="'M'" [colorDark]="'#2C2420'" [colorLight]="'#ffffff'"></qrcode>
+    </div>
+    <p class="qr-overlay__hint">Scannez pour vérifier l'origine du lot</p>
+    <button type="button" class="qr-overlay__close" (click)="closeOverlay()">Fermer</button>
+  </div>
+</div>

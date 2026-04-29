@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sunugold": {
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/sunugold",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.json",
+            "styles": ["src/styles.scss"],
+            "assets": ["src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "all",
+              "minify": true,
+              "extractLicenses": true,
+              "sourceMap": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "sunugold:build",
+            "allowedHosts": [".ngrok-free.app", ".ngrok.io", "localhost", "127.0.0.1"]
+          }
+        }
+      }
+    }
+  }
+}

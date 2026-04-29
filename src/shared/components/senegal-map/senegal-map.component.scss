@@ -1,0 +1,50 @@
+.senegal-map { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--earth-200); }
+.senegal-map__live {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  background: linear-gradient(90deg, rgba(46, 125, 50, 0.12), transparent);
+  font-size: 0.75rem;
+  color: var(--earth-600);
+  border-bottom: 1px solid var(--earth-100);
+}
+.senegal-map__live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2E7D32;
+  animation: senegal-map-pulse 1.5s ease-in-out infinite;
+}
+@keyframes senegal-map-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+.senegal-map__container { height: 320px; width: 100%; background: var(--earth-100); }
+.senegal-map__region-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--earth-50);
+  border-top: 1px solid var(--earth-100);
+  font-size: 0.75rem;
+}
+.senegal-map__region-item { display: flex; flex-direction: column; gap: 2px; }
+.senegal-map__region-name { font-weight: 600; color: var(--earth-800); }
+.senegal-map__region-values { color: var(--earth-500); }
+.senegal-map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--earth-0);
+  border-top: 1px solid var(--earth-100);
+  font-size: 0.75rem;
+  color: var(--earth-600);
+}
+.senegal-map__legend-item { display: inline-flex; align-items: center; gap: var(--space-xs); }
+.senegal-map__dot { width: 10px; height: 10px; border-radius: 50%; }
+.senegal-map__legend-item--mineur .senegal-map__dot { background: #E8960C; }
+.senegal-map__legend-item--commercant .senegal-map__dot { background: #2E7DB8; }
+.senegal-map__legend-item--transporteur .senegal-map__dot { background: #7C4DFF; }

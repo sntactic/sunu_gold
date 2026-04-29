@@ -1,0 +1,96 @@
+.qr-icon {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--earth-0);
+  border: 1px solid var(--earth-200);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+.qr-icon:hover {
+  border-color: var(--primary-400);
+  background: var(--primary-50);
+}
+.qr-icon__symbol {
+  font-size: 24px;
+  color: var(--earth-700);
+}
+.qr-icon:hover .qr-icon__symbol {
+  color: var(--primary-600);
+}
+
+.qr-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  overflow: auto;
+}
+.qr-overlay__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+.qr-overlay__box {
+  position: relative;
+  z-index: 2;
+  background: var(--earth-0);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--earth-200);
+  min-width: 280px;
+  max-width: 100%;
+}
+.qr-overlay__title {
+  font-weight: 600;
+  color: var(--earth-800);
+  margin: 0 0 var(--space-md);
+  font-size: 1rem;
+}
+.qr-overlay__qrcode-wrap {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.qr-overlay__qrcode-wrap qrcode ::ng-deep img,
+.qr-overlay__qrcode-wrap qrcode ::ng-deep canvas {
+  display: block !important;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius);
+}
+.qr-overlay__hint {
+  font-size: 0.85rem;
+  color: var(--earth-500);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+.qr-overlay__close {
+  display: block;
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--earth-200);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--earth-800);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.qr-overlay__close:hover { background: var(--earth-300); }

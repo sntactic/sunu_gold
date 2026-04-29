@@ -1,0 +1,18 @@
+<div class="senegal-map">
+  <div class="senegal-map__live" *ngIf="showLiveBadge">
+    <span class="senegal-map__live-dot"></span>
+    Données en direct · Dernière MAJ : à l'instant
+  </div>
+  <div #mapContainer class="senegal-map__container"></div>
+  <div class="senegal-map__region-stats" *ngIf="regionStats?.length">
+    <div class="senegal-map__region-item" *ngFor="let r of regionStats">
+      <span class="senegal-map__region-name">{{ r.region }}</span>
+      <span class="senegal-map__region-values">{{ r.kg }} kg · {{ r.acteurs }} acteur(s) · {{ r.lotsTransit }} en transit</span>
+    </div>
+  </div>
+  <div class="senegal-map__legend">
+    <span class="senegal-map__legend-item senegal-map__legend-item--mineur"><span class="senegal-map__dot"></span> Orpailleurs</span>
+    <span class="senegal-map__legend-item senegal-map__legend-item--commercant"><span class="senegal-map__dot"></span> Commerçants</span>
+    <span class="senegal-map__legend-item senegal-map__legend-item--transporteur"><span class="senegal-map__dot"></span> Transporteurs</span>
+  </div>
+</div>

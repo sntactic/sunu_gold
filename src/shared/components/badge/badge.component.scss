@@ -1,0 +1,45 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity var(--transition);
+}
+
+.badge:hover {
+  opacity: 0.9;
+}
+
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.badge--certified  { background: var(--green-100); color: var(--green-500); }
+.badge--certified .badge__dot { background: var(--green-500); }
+
+.badge--en-transit { background: var(--blue-100); color: var(--blue-500); }
+.badge--en-transit .badge__dot { background: var(--blue-500); }
+
+.badge--en-attente { background: var(--amber-100); color: var(--amber-500); }
+.badge--en-attente .badge__dot { background: var(--amber-500); }
+
+.badge--alerte     { background: var(--red-100); color: var(--red-500); }
+.badge--alerte .badge__dot { background: var(--red-500); }
+
+.badge--valid      { background: var(--green-100); color: var(--green-500); }
+.badge--valid .badge__dot { background: var(--green-500); }
+
+.badge--expired    { background: var(--red-100); color: var(--red-500); }
+.badge--expired .badge__dot { background: var(--red-500); }
+
+.badge--bloque     { background: var(--earth-200); color: var(--earth-700); }
+.badge--bloque .badge__dot { background: var(--earth-600); }
+
+.badge--vendu      { background: #e9d5ff; color: #7c3aed; }
+.badge--vendu .badge__dot { background: #7c3aed; }

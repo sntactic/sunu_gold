@@ -1,0 +1,102 @@
+:host { display: block; }
+
+.stat-card {
+  background: var(--earth-0);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--earth-100);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.stat-card--gold::before  { background: linear-gradient(90deg, var(--primary-300), var(--primary-500)); }
+.stat-card--green::before { background: linear-gradient(90deg, var(--green-500), #43A047); }
+.stat-card--blue::before  { background: linear-gradient(90deg, var(--blue-500), #1976D2); }
+.stat-card--amber::before { background: linear-gradient(90deg, var(--amber-500), #FFA726); }
+
+.stat-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.stat-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card__icon .material-icons-round,
+.stat-card__icon svg {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.stat-card--gold  .stat-card__icon { background: var(--primary-50); color: var(--primary-600); }
+.stat-card--green .stat-card__icon { background: var(--green-100); color: var(--green-500); }
+.stat-card--blue  .stat-card__icon { background: var(--blue-100); color: var(--blue-500); }
+.stat-card--amber .stat-card__icon { background: var(--amber-100); color: var(--amber-500); }
+
+.stat-card__trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.stat-card__trend-icon {
+  font-size: 16px !important;
+  width: 16px;
+  height: 16px;
+}
+
+.stat-card__trend--up   { background: var(--green-100); color: var(--green-500); }
+.stat-card__trend--down { background: var(--red-100);   color: var(--red-500); }
+
+.stat-card__value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--earth-800);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.stat-card__unit {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--earth-500);
+  margin-left: 4px;
+}
+
+.stat-card__label {
+  font-size: 0.8rem;
+  color: var(--earth-500);
+  margin-top: var(--space-xs);
+  font-weight: 500;
+}

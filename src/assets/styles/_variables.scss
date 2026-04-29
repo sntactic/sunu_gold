@@ -1,0 +1,78 @@
+// ═══════════════════════════════════════════════════════════════════════════
+// Design Tokens SunuGOLD — Variables SCSS (pour composants)
+// Cohérence avec :root dans styles.scss
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Primaire (or)
+$primary-50:  #FDF8EC;
+$primary-100: #F5E6C8;
+$primary-200: #E8C97A;
+$primary-300: #D4A843;
+$primary-400: #C49328;
+$primary-500: #B07D1A;
+$primary-600: #8A6014;
+$primary-700: #6B4A0F;
+
+$gold-50:  $primary-50;
+$gold-100: $primary-100;
+$gold-200: $primary-200;
+$gold-300: $primary-300;
+$gold-400: $primary-400;
+$gold-500: $primary-500;
+$gold-600: $primary-600;
+$gold-700: $primary-700;
+
+// Neutres (terre)
+$earth-900: #1A1410;
+$earth-800: #2C2420;
+$earth-700: #3D332B;
+$earth-600: #504338;
+$earth-500: #6B5B4E;
+$earth-400: #8A7B6B;
+$earth-300: #B0A394;
+$earth-200: #D4CABE;
+$earth-100: #EDE8E2;
+$earth-50:  #F7F4F0;
+$earth-0:   #FFFFFF;
+
+// Sémantique
+$red-500:   #C62828;
+$red-100:   #FFEBEE;
+$green-500: #2E7D32;
+$green-100: #E8F5E9;
+$blue-500:  #1565C0;
+$blue-100:  #E3F2FD;
+$amber-500: #FF8F00;
+$amber-100: #FFF8E1;
+
+// Espacements
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+$space-3xl: 64px;
+
+// Rayons
+$radius-sm: 8px;
+$radius: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 9999px;
+
+// Ombres
+$shadow-sm: 0 1px 3px rgba(26, 20, 16, 0.06);
+$shadow: 0 4px 20px rgba(26, 20, 16, 0.08);
+$shadow-lg: 0 12px 40px rgba(26, 20, 16, 0.12);
+$shadow-xl: 0 24px 56px rgba(26, 20, 16, 0.14);
+
+// Transitions
+$transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Breakpoints (responsive)
+$bp-sm: 600px;
+$bp-md: 960px;
+$bp-lg: 1280px;
+$bp-xl: 1920px;
